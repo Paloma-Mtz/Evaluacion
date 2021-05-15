@@ -1,0 +1,32 @@
+ 
+     
+<table class="table table-striped text-center">
+    <thead class=" ">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Compañia</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Edad <br> recomendada</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+    <tr class="border" *ngFor="let juguete of jugueteServicio.listaJuguetes">
+        <td>{{juguete.id}}</td>
+        <td>{{juguete.nombre}}</td>
+        <td>{{juguete.descripcion}}</td> 
+        <td>{{juguete.compania}}</td> 
+        <td>$ {{juguete.precio}}</td>
+        <td>{{juguete.restriccionEdad}}</td>
+        <td>
+            <i class="far fa-edit fa-lg text-info" (click)="editarInformacion(juguete)" style="cursor: pointer"></i>
+        </td>
+        <td>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="eliminarDato(juguete.id)" style="cursor: pointer"></i>
+        </td>
+    </tr>
+</table>
+
+ 

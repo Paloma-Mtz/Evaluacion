@@ -1,0 +1,46 @@
+ 
+ <form [formGroup]="registro" (ngSubmit)="guardarDatos()">
+      
+        <div class="form-group">
+            <label   >Nombre</label>
+            <input type="text" formControlName="nombre" maxlength="50" class="form-control"   placeholder="Nombre del juguete"  >
+        </div>
+        <br>
+        <div class="form-group">
+            <label  >Descripcion</label>
+            <input type="text" formControlName="descripcion" maxlength="100" class="form-control"  placeholder="Descripción del producto">
+        </div>
+        <br> 
+
+            <div class="form-group">
+                <label  >Restricción de Edad</label>
+                <input type="number" formControlName="restriccionEdad" class="form-control"   placeholder="Edad recomendada" >
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label  >Precio</label>
+                <input type="number" formControlName="precio" max="1000" class="form-control"   placeholder="Precio"  >
+            </div> 
+        <br>
+        <div class="form-group">
+            <label  >Compañía</label>
+            <input type="text" formControlName="compania" maxlength="50" class="form-control"   placeholder="Companía" >
+        </div>
+<br>
+        <div class="row justify-content-around form-group text-center">
+            <div class="col-md-6">
+
+                <button class="btn btn-primary btn-lg"  [disabled]="registro.invalid"  type="submit">
+                 <i class="fas fa-paper-plane"></i>   Enviar
+                </button>
+            </div>   
+            
+            <div class="col-md-6">
+
+                <button class="btn btn-danger btn-lg"    type="reset">
+                    <i class="fas fa-times"></i>   Cancelar
+                </button>
+            </div>
+        </div>
+    </form> 
